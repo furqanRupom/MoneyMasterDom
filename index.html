@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>MoneyMaster</title>
+</head>
+<body>
+    <header class="p-5">
+        <h2 class="text-5xl font-bold text-sky-500 text-center">
+            Money Master <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 inline">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>             
+        </h2>
+    </header>
+
+
+    <main class="container max-w-6xl mx-auto my-20">
+
+        <section class="grid grid-cols-2 justify-items-center">
+
+            <section>
+                <img class="h-[100%] object-cover" src="./img/Pexels Photo by Karolina Grabowska.png" alt="">
+            </section>
+    
+    
+            <section class="px-32 py-10 bg-gray-50">
+                <div>
+                    <h2 class="text-4xl font-bold text-center py-5">Income</h2>
+                    <div class="flex justify-end space-x-5">
+                        <h2 class="text-2xl font-semibold inline" >Income :</h2>
+                         <input id="income-field" class="border-1  border-black px-2 py-2 bg-gray-300" type="text">
+                    </div>
+
+                </div>
+
+                <div class="my-5"> 
+                    <div>
+                        <h2 class="text-4xl font-bold text-center py-5">Expenses</h2>
+                    </div>
+
+                    <div class="flex flex-col space-y-10">
+
+                        <div class="flex justify-end space-x-5">
+                            <h2 class="text-2xl font-semibold">Food:</h2> 
+                            <input id="food-field" class="border-1  border-black px-2 py-2 bg-gray-300" type="text">
+                        </div>
+    
+                        <div class="flex   justify-end space-x-5">
+                            <h2 class="text-2xl font-semibold">Rent:</h2> 
+                            <input id="rent-field" class="border-1  border-black px-2 py-2 bg-gray-300" type="text">
+                        </div>
+    
+                        <div class="flex  justify-end space-x-5">
+                            <h2 class="text-2xl font-semibold">Cloths:</h2> 
+                            <input id="cloths-field" class="border-1  border-black px-2 py-2 bg-gray-300" type="text">
+                        </div>
+
+                    </div>
+                    <div class="flex justify-center">
+
+                        <button id="calculate-btn" class="px-8 my-6  py-3 border-none bg-sky-500 text-white font-bold">Calculate</button>
+                    </div>
+                </div>
+
+
+                <div class="my-5">
+                    <h1 class="text-3xl font-semibold">Total Expenses: <span id="expense-total"></span></h1>
+                    <h1 class="text-3xl font-semibold py-3">Balance: <span id="Balance-total"></span></h1>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <div>
+                        <label class="text-3xl font-semibold" for="save">save:</label>
+                        <input id="save-field" class="w-6/12 bg-gray-300 py-3 px-1" type="text">
+                    </div>
+                    <span class="text-4xl text-sky-500 p-5">%</span>
+
+                    <button id="save-btn" class=" px-8   py-3 border-none bg-sky-500 text-white font-bold">Save</button>
+                </div>
+
+
+                <div class="my-5">
+                    <h1 class="text-3xl font-semibold">Saving Amount: <span id="saving-total"></span></h1>
+                    <h1 class="text-3xl font-semibold py-3">Remaining Balance: <span id="remain-total"></span></h1>
+                </div>
+            </section>
+
+            
+            
+        </section>
+    </main>
+
+    <script src="./js/money.js"></script>
+</body>
+</html>
